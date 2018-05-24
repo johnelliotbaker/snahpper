@@ -62,8 +62,6 @@ class Publisher(object):
                     else:
                         strn = HTML_TEMPLATE.format(href, title)
                         aStrn.append(HTML_TEMPLATE.format(href, title))
-                        #  self.hm.addCardText(strn)
-                        #  self.hm.appendBody(strn)
                     totalFiles += 1
             dateStrn += ' - {}'.format(fgroup.upper())
             aData.append( {'dt': dateStrn, 'data': aStrn} )
@@ -90,7 +88,6 @@ class Publisher(object):
         for data in self.aRawData:
             tmp = []
             self.stylizer.init(data[0])
-            #  self.stylizer.normalizeBrackets()
             tmp.append( self.stylizer.strn.strip() )
             tmp.append(data[1].strip())
             tmp.append(data[2])

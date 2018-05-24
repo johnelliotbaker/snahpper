@@ -51,7 +51,6 @@ class Stylizer(object):
             color = MEGA_COLOR
         if strn == 'ZS':
             color = ZS_COLOR
-        #  strn = "[color={}]".format(color) + strn + "[/color]"
         pattern = "{1:s}"
         if style == 'forum':
             pattern = FORUM_COLOR_PATTERN

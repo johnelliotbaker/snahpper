@@ -21,7 +21,6 @@ N_FORGIVENESS = 10
 
 
 def getNow():
-    #  return datetime.utcnow()
     return datetime.now()
 
 
@@ -49,7 +48,6 @@ class Crawler(object):
         url = urljoin(self.host, forumUrl)
         return url
 
-    #  def publish(self, filename='dailyHarvest.txt'):
     def publish(self, **kwargs):
         filename = kwargs['filename'] if 'filename' in kwargs else 'published.text'
         days = kwargs['days'] if 'days' in kwargs else 7
