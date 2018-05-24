@@ -97,32 +97,28 @@ class Crawler(object):
     
 
 if __name__ == "__main__":
-    import pdb
-    try:
-        config = Configurator(CONFIG_PATH)
-        with open('jobs.json', 'r', encoding="utf-8") as fh:
-            jsjob = json.loads(fh.read())
-            aJob = jsjob['jobs']
-            jobMode =  jsjob['mode']
-            config.setMode(jobMode)
-        for job in aJob:
-            bOnline = False if config.getMode() == 'local' else True
-            title = job['title']
-            minYear = job['minYear'] if 'minYear' in job else None
-            if job['enabled']:
-                days = job['days']
-                basename = title
-                crawler = Crawler(config)
-                if bOnline: queue = job['queue']
-                else: queue = [9]
-                crawler.crawl(queue, days)
-                if minYear is not None:
-                    filt = Filter(crawler.data)
-                    crawler.data = filt.removeBeforeYear(minYear)
-                for style in config.cfg['publish']['queue']:
-                    filename = basename + config.cfg['publish'][style]['filename']['extension']
-                    crawler.publish(filename=filename, days=days, style=style)
-                    if config.cfg['publish']['bArchive'] == 1:
-                        shutil.copyfile(filename, pjoin(ARCHIVE_PATH, filename))
-    except:
-        pdb.post_mortem()
+    config = Configurator(CONFIG_PATH)
+    with open('jobs.json', 'r', encoding="utf-8") as fh:
+        jsjob = json.loads(fh.read())
+        aJob = jsjob['jobs']
+        jobMode =  jsjob['mode']
+        config.setMode(jobMode)
+    for job in aJob:
+        bOnline = False if config.getMode() == 'local' else True
+        title = job['title']
+        minYear = job['minYear'] if 'minYear' in job else None
+        if job['enabled']:
+            days = job['days']
+            basename = title
+            crawler = Crawler(config)
+            if bOnline: queue = job['queue']
+            else: queue = [9]
+            crawler.crawl(queue, days)
+            if minYear is not None:
+                filt = Filter(crawler.data)
+                crawler.data = filt.removeBeforeYear(minYear)
+            for style in config.cfg['publish']['queue']:
+                filename = basename + config.cfg['publish'][style]['filename']['extension']
+                crawler.publish(filename=filename, days=days, style=style)
+                if config.cfg['publish']['bArchive'] == 1:
+                    shutil.copyfile(filename, pjoin(ARCHIVE_PATH, filename))
