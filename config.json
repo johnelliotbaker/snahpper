@@ -1,0 +1,40 @@
+{
+    "mode": "snahp",
+    "connection": {
+        "snahp": {
+            "host": "https://forum.snahp.it",
+            "credentials": {
+                "username": "your username",
+                "password": "your password"
+            }
+        },
+        "local": {
+            "host": "http://192.168.2.11:888",
+            "credentials": {
+                "username": "local username",
+                "password": "local password"
+            }
+        }
+    },
+    "publish": {
+        "bArchive": 0,
+        "queue": ["html"],
+        "html": {
+            "filename":{
+                "prefix": "",
+                "extension": ".html",
+                "bDatetime": 1
+            }
+        },
+        "forum": {
+            "filename":{
+                "prefix": "",
+                "extension": ".txt",
+                "bDatetime": 1
+            }
+        }
+    },
+    "forumDef":{
+        "filepath": "ForumDef.json"
+    }
+}

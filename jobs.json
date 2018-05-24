@@ -1,0 +1,42 @@
+{
+    "mode": "snahp",
+    "jobs": [
+        {
+            "title": "TV",
+            "queue": [64, 31, 32, 65, 33, 61, 62, 57],
+            "days": 3,
+            "enabled": 1
+        },
+        {
+            "title": "Movie",
+            "queue": [26, 56],
+            "days": 3,
+            "enabled": 1,
+            "minYear": 1995
+        },
+        {
+            "title": "Anime",
+            "queue": [13],
+            "days": 7,
+            "enabled": 0
+        },
+        {
+            "title": "Game",
+            "queue": [41],
+            "days": 14,
+            "enabled": 0
+        },
+        {
+            "title": "Misc",
+            "queue": [37, 39],
+            "days": 2,
+            "enabled": 0
+        },
+        {
+            "title": "Request",
+            "queue": [17, 68],
+            "days": 3,
+            "enabled": 1
+        }
+    ]
+}

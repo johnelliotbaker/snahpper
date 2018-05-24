@@ -1,0 +1,138 @@
+{
+    "9": {
+        "title": "local",
+        "group": "local"
+    },
+    "68": {
+        "title": "tv request",
+        "group": "request"
+    },
+    "17": {
+        "title": "movie request",
+        "group": "request"
+    },
+    "64": {
+        "title": "sd",
+        "group": "tv"
+    },
+    "31": {
+        "title": "720",
+        "group": "tv"
+    },
+    "32": {
+        "title": "bluray",
+        "group": "tv"
+    },
+    "65": {
+        "title": "4k",
+        "group": "tv"
+    },
+    "33": {
+        "title": "documentary",
+        "group": "tv"
+    },
+    "61": {
+        "title": "sports",
+        "group": "tv"
+    },
+    "62": {
+        "title": "standup",
+        "group": "tv"
+    },
+    "57": {
+        "title": "x265",
+        "group": "tv"
+    },
+    "34": {
+        "title": "lossy",
+        "group": "music"
+    },
+    "35": {
+        "title": "lossless",
+        "group": "music"
+    },
+    "36": {
+        "title": "video",
+        "group": "music"
+    },
+    "58": {
+        "title": "broadway",
+        "group": "music"
+    },
+    "63": {
+        "title": "others",
+        "group": "music"
+    },
+    "40": {
+        "title": "windows",
+        "group": "app"
+    },
+    "24": {
+        "title": "mac",
+        "group": "app"
+    },
+    "47": {
+        "title": "mobile",
+        "group": "app"
+    },
+    "41": {
+        "title": "pc",
+        "group": "game"
+    },
+    "25": {
+        "title": "console",
+        "group": "game"
+    },
+    "42": {
+        "title": "cam",
+        "group": "movie"
+    },
+    "55": {
+        "title": "sd",
+        "group": "movie"
+    },
+    "26": {
+        "title": "720p",
+        "group": "movie"
+    },
+    "29": {
+        "title": "bluray",
+        "group": "movie"
+    },
+    "66": {
+        "title": "3d",
+        "group": "movie"
+    },
+    "30": {
+        "title": "4k",
+        "group": "movie"
+    },
+    "56": {
+        "title": "x265",
+        "group": "movie"
+    },
+    "37": {
+        "title": "ebooks",
+        "group": "misc"
+    },
+    "38": {
+        "title": "audiobooks",
+        "group": "misc"
+    },
+    "39": {
+        "title": "tutorials",
+        "group": "misc"
+    },
+    "43": {
+        "title": "comics",
+        "group": "misc"
+    },
+    "44": {
+        "title": "magazines",
+        "group": "misc"
+    },
+    "59": {
+        "title": "others",
+        "group": "misc"
+    }
+}

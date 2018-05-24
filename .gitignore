@@ -1,0 +1,8 @@
+test/
+pub/
+__pycache__/
+*.jpg
+*.png
+*.txt
+*.html
+*.pyc
