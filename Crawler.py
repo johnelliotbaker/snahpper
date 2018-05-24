@@ -71,8 +71,6 @@ class Crawler(object):
                     forumDef[fidStrn]['group'],
                     ) if fidStrn in forumDef else 'unknown'
             url = self.getForumUrl(fid)
-            #  resp = collector.collect(url)
-            #  collector.data += collector.collectTopics(response=resp)
             res = []
             nextUrl = url
             bLoop = True
