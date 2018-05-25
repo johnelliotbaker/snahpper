@@ -75,7 +75,7 @@ class Browser(object):
         type = getKwRequestType(kwargs)
         url = getKwUrl(kwargs)
         payload = getKwPayload(kwargs)
-        print('>>>>>>>>>>   {}   <<<<<<<<<<'.format(url))
+        print('{}   <<<<<<<<<<'.format(url))
         if type == 'get':
             resp = session.get(url, headers=self.headers)
         elif type == 'post':
