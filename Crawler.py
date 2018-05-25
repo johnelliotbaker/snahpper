@@ -35,13 +35,14 @@ class Crawler(object):
         self.auth = val.getAuth()
         self.bOnline = True if self.host == 'local' else False
     
-    def __init__(self, config):
+    def __init__(self, config, browser=None):
         self.config = config
-        self.br = Browser()
+        self.br = Browser() if browser is None else browser
         self.collector = Collector(self.br)
         self.idx = 0
         self.data = []
-        self.resp = self.br.login(self.host, self.auth['username'], self.auth['password'])
+        if not self.br.isLoggedIn():
+            self.resp = self.br.login(self.host, self.auth['username'], self.auth['password'])
 
     def getForumUrl(self, fid):
         forumUrl = './viewforum.php?f={}&sk=c'.format(fid)

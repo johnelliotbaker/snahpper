@@ -65,6 +65,10 @@ class Browser(object):
         payload = {'username': username, 'password': password, 'login':'Login'}
         resp = self.request(url=url, type='post', payload=payload)
         return resp
+    
+    def isLoggedIn(self):
+        bLogged = len(self.session.cookies) > 0
+        return bLogged
 
     def request(self, **kwargs):
         session = self.session
