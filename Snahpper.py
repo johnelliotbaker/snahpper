@@ -2,6 +2,9 @@ from Browser import Browser
 from Crawler import Crawler
 from Configurator import Configurator
 from Filter import Filter
+from Publisher import Publisher
+from HtmlMaker import HtmlMaker
+from os.path import splitext
 import json
 
 CONFIG_PATH = './config.json'
@@ -26,8 +29,21 @@ class Snahpper(object):
         self.config.setMode(jobMode)
         return self.aJob
 
+    def publishIndex(self, aPublishedFile):
+        hm = HtmlMaker()
+        hm.setTitle('Snahpper Index')
+        hm.addCard()
+        hm.addCardTitle('')
+        for filename in aPublishedFile:
+            base, ext = splitext(filename)
+            link = '<li><a href="{}" style="color:black;">{}</a></li>'.format(filename, base)
+            hm.addCardText(link)
+        hm.save('index.html')
+
+
     def exec(self):
         config = self.config
+        aPublishedFile = []
         for job in self.aJob:
             bOnline = False if config.getMode() == 'local' else True
             title = job['title']
@@ -45,6 +61,8 @@ class Snahpper(object):
                 for style in config.cfg['publish']['queue']:
                     filename = basename + config.cfg['publish'][style]['filename']['extension']
                     crawler.publish(filename=filename, days=days, style=style)
+                    aPublishedFile.append(filename)
+        self.publishIndex(aPublishedFile)
 
 if __name__ == "__main__":
     snahpper = Snahpper()
