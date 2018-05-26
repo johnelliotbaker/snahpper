@@ -19,7 +19,7 @@ class Collector(object):
     def collect(self, url):
         self.url = url
         resp = self.br.request(url=url)
-        self.br.writelog(resp)
+        #  self.br.writelog(resp)
         self.loadbs(resp)
         self.lastResp = resp
         return resp
