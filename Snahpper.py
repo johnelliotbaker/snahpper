@@ -5,6 +5,8 @@ from Filter import Filter
 from Publisher import Publisher
 from HtmlMaker import HtmlMaker
 from os.path import splitext
+from os.path import join as pjoin
+import os 
 import json
 
 CONFIG_PATH = './config.json'
@@ -34,9 +36,11 @@ class Snahpper(object):
         hm.setTitle('Snahpper Index')
         hm.addCard()
         hm.addCardTitle('')
+        curDir = os.path.dirname(os.path.realpath(__file__))
         for filename in aPublishedFile:
             base, ext = splitext(filename)
-            link = '<li><a href="{}" style="color:black;">{}</a></li>'.format(filename, base)
+            link = '<li><a href="{}" style="color:black;">{}</a></li>'.format(
+                    pjoin(curDir, filename), base)
             hm.addCardText(link)
         hm.save('index.html')
 
