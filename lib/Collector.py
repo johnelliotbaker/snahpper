@@ -1,4 +1,4 @@
-from Browser import Browser
+from lib.Browser import Browser
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from datetime import datetime

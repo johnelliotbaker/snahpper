@@ -1,12 +1,12 @@
-from Browser import Browser
-from Publisher import Publisher
-from Collector import Collector
-from bs4 import BeautifulSoup
-from Stylizer import Stylizer
-from Categorizer import Categorizer
-from Configurator import Configurator
-from Filter import Filter
+from lib.Browser import Browser
+from lib.Publisher import Publisher
+from lib.Collector import Collector
+from lib.Stylizer import Stylizer
+from lib.Categorizer import Categorizer
+from lib.Configurator import Configurator
+from lib.Filter import Filter
 
+from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
 from os.path import join as pjoin

@@ -1,4 +1,4 @@
-from Categorizer import Categorizer
+from lib.Categorizer import Categorizer
 
 class Filter(object):
     def __init__(self, aData):

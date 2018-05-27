@@ -1,8 +1,9 @@
-from Stylizer import Stylizer
-from Categorizer import Categorizer
-from datetime import datetime, timedelta
-from HtmlMaker import HtmlMaker
+from lib.Stylizer import Stylizer
+from lib.Categorizer import Categorizer
+from lib.HtmlMaker import HtmlMaker
+
 import time
+from datetime import datetime, timedelta
 from os.path import splitext
 
 
@@ -20,7 +21,6 @@ class Publisher(object):
         self.categorizer = Categorizer('')
         self.getDatetimeArray(self.days)
         self.hm = HtmlMaker()
-
         self.preprocess()
 
     def getDatetimeArray(self, days=7):
