@@ -1,9 +1,10 @@
-from Browser import Browser
-from Crawler import Crawler
-from Configurator import Configurator
-from Filter import Filter
-from Publisher import Publisher
-from HtmlMaker import HtmlMaker
+from lib.Browser import Browser
+from lib.Crawler import Crawler
+from lib.Configurator import Configurator
+from lib.Filter import Filter
+from lib.Publisher import Publisher
+from lib.HtmlMaker import HtmlMaker
+
 from os.path import splitext
 from os.path import join as pjoin
 import os 
