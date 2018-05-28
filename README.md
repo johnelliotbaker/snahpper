@@ -54,11 +54,11 @@ Optionally, following fields can adjust the data retrieval
 ## Usage
 Depending on the way python3 has been installed
 snahpper can be launched simply by double clicking the 
-Crawler.py
+Snahpper.py
 
 or issuing a command in terminal
 
-    python3 Crawler.py
+    python3 Snahpper.py
 
-The Crawler.py will generate html files for viewing.
+The Snahpper.py will generate index.html file for viewing.
 
