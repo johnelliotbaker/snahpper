@@ -135,8 +135,24 @@
         "title": "magazines",
         "group": "misc"
     },
+    "73": {
+        "title": "movies",
+        "group": "movie packs"
+    },
+    "72": {
+        "title": "movies",
+        "group": "foreign"
+    },
     "59": {
         "title": "others",
         "group": "misc"
+    },
+    "74": {
+        "title": "tv",
+        "group": "tv packs"
+    },
+    "75": {
+        "title": "tv",
+        "group": "foreign"
     }
 }
