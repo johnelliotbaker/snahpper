@@ -24,13 +24,13 @@
             "title": "Game",
             "queue": [41],
             "days": 14,
-            "enabled": 0
+            "enabled": 1
         },
         {
             "title": "Misc",
             "queue": [37, 39],
-            "days": 2,
-            "enabled": 0
+            "days": 3,
+            "enabled": 1
         },
         {
             "title": "Request",
