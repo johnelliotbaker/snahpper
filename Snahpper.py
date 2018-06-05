@@ -72,3 +72,8 @@ class Snahpper(object):
 if __name__ == "__main__":
     snahpper = Snahpper()
     snahpper.exec()
+    try:
+        import webbrowser
+        webbrowser.open("index.html")
+    except Exception as e:
+        print("Could not open default browser")
